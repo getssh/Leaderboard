@@ -27,10 +27,15 @@ main {
   width: 100%;
 }
 
+.score-table tr:nth-child(even) {
+  background-color: rgb(211, 211, 211);
+}
+
 .add-score {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-self: flex-start;
 }
 
 .add-score-data {
