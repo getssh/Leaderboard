@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+
+.main-title {
+  margin-left: 20%;
+  margin-top: 10%;
+}
+
+.score-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.score-table {
+  border: 1px solid #000;
+  width: 100%;
+}
+
+.score-table tr:nth-child(even) {
+  background-color: rgb(211, 211, 211);
+}
+
+.add-score {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-self: flex-start;
+}
+
+.add-score-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.submit-score {
+  width: 50%;
+  align-self: flex-end;
+}
