@@ -2,8 +2,8 @@
 
 # 📗 Table of Contents
 
-- [� Table of Contents](#-table-of-contents)
-- [📖 \[webpack-demo\] ](#-webpack-demo-)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 \[Leaderboard\] ](#-leaderboard-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -25,9 +25,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [webpack-demo] <a name="about-project"></a>
+# 📖 [Leaderboard] <a name="about-project"></a>
 
-**[webpack-demo]** This is a project to practice web-pack use and implementations.
+**[Leaderboard]** Leaderboard is a project that can be used as a score manager for differnt games. It has a form to create a score and a tabe on the side to show added scores to the user. Creating and getting score data is done using different API methods like GET and POST.
 
 ## 🛠 Built With <a name="built-with"></a>
 
