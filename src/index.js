@@ -1,9 +1,20 @@
 import './style.css';
 
+const userName = document.querySelector('#name');
+const score = document.querySelector('#score');
+const submitBtn = document.querySelector('.submit-score');
+const scoreTable = document.querySelector('.score-table');
+const apiEndPoint = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games';
 const gameId = '4mvJYTSh7H5F6fBw4moX';
 
+const showTable = (scoreData) => {
+  scoreTable.innerHTML = '';
+  const eachData = scoreData.map((element) => `<tr><td>${element.user}:</td><td>${element.score}</td></tr>`);
+  scoreTable.innerHTML = eachData;
+};
+
 const addNewScore = async (userName, socreValue) => {
-  const postData = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores`, {
+  const postData = await fetch(`${apiEndPoint}/${gameId}/scores`, {
     method: 'POST',
     body: JSON.stringify({
       user: userName,
@@ -19,12 +30,14 @@ const addNewScore = async (userName, socreValue) => {
 };
 
 const getScores = async () => {
-  const getScores = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores`);
+  const getScores = await fetch(`${apiEndPoint}/${gameId}/scores`);
   const scores = await getScores.json();
+  const socreResult = scores.result;
 
-  console.log(scores);
-  console.log(scores.result.length);
+  showTable(socreResult);
+  console.log(socreResult);
+  console.log(socreResult.length);
 };
 
-addNewScore('John Doe', 42);
+addNewScore('John kebded', 77);
 getScores();
