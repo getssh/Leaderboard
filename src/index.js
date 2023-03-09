@@ -9,8 +9,11 @@ const gameId = '4mvJYTSh7H5F6fBw4moX';
 
 const showTable = (scoreData) => {
   scoreTable.innerHTML = '';
+  const tableBody = document.createElement('tbody');
+  tableBody.className = 'score-table-rows';
   const eachData = scoreData.map((element) => `<tr><td>${element.user}:</td><td>${element.score}</td></tr>`);
-  scoreTable.innerHTML = eachData;
+  tableBody.innerHTML = eachData.join('');
+  scoreTable.appendChild(tableBody);
 };
 
 const addNewScore = async (userName, socreValue) => {
