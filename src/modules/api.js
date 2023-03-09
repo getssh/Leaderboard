@@ -1,3 +1,5 @@
+import showError from './showError.js';
+
 const apiEndPoint = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games';
 const gameId = 'GlLBSxZJ2Lt3ESEwpZKy';
 
@@ -23,15 +25,17 @@ export const addNewScore = async (userName, socreValue, refreshScore) => {
       },
     });
   } catch (error) {
-    console.log(error);
+    showError(error);
   }
 
   if (postData.status === 201) {
     const response = await postData.json();
     refreshScore();
     console.log(response.status);
+    showError('');
   } else {
     const errorText = await postData.json();
-    console.log('File creation failed', postData.status, errorText.message);
+    const errMsg = `${postData.status}: ${errorText.message}`;
+    showError(errMsg);
   }
 };

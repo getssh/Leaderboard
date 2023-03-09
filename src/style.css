@@ -49,6 +49,11 @@ main {
   gap: 15px;
 }
 
+.show-error {
+  width: 70%;
+  color: #f00;
+}
+
 .submit-score {
   width: 50%;
   align-self: flex-end;
