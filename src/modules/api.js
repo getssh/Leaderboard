@@ -1,7 +1,7 @@
 import showError from './showError.js';
 
 const apiEndPoint = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games';
-const gameId = 'GlLBSxZJ2Lt3ESEwpZKy';
+const gameId = 'fHnMFmSxcT7sNevZkIqB';
 
 export const getScores = async () => {
   const getScores = await fetch(`${apiEndPoint}/${gameId}/scores`);
