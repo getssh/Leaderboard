@@ -5,6 +5,7 @@ const userName = document.querySelector('#name');
 const score = document.querySelector('#score');
 const submitBtn = document.querySelector('.submit-score');
 const scoreTable = document.querySelector('.score-table');
+const refresh = document.querySelector('.score-refresh');
 
 const showTable = (scoreData) => {
   scoreTable.innerHTML = '';
@@ -15,14 +16,22 @@ const showTable = (scoreData) => {
   scoreTable.appendChild(tableBody);
 };
 
+const renderScore = () => {
+  getScores().then(
+    (value) => showTable(value),
+    (error) => console.log(error),
+  );
+};
+
 submitBtn.addEventListener('click', (event) => {
   event.preventDefault();
-  addNewScore(userName.value, score.value);
+  addNewScore(userName.value, score.value, renderScore);
   userName.value = '';
   score.value = '';
 });
 
-getScores().then(
-  (value) => showTable(value),
-  (error) => console.log(error),
-);
+refresh.addEventListener('click', () => {
+  renderScore();
+});
+
+renderScore();
