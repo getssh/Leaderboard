@@ -27,7 +27,7 @@
 
 # 📖 [Leaderboard] <a name="about-project"></a>
 
-**[Leaderboard]** Leaderboard is a project that can be used as a score manager for differnt games. It has a form to create a score and a tabe on the side to show added scores to the user. Creating and getting score data is done using different API methods like GET and POST.
+**[Leaderboard]** Leaderboard is a project that can be used as a score manager for differnt games. It has a form to create a score and a table on the side to show added scores to the user. Creating and getting score data is done using different API methods like GET and POST.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -60,7 +60,7 @@ For this project, HTML, CSS and JavaScript has been used
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Coming soon
+- <a href="https://getssh.github.io/Leaderboard">Live Demo Link</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
