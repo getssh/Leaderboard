@@ -2,17 +2,27 @@
   box-sizing: border-box;
 }
 
+body {
+  background: rgb(116,4,195);
+  background: linear-gradient(90deg, rgba(116,4,195,1) 16%, rgba(163,58,219,1) 47%, rgba(88,214,240,1) 93%);
+  height: 100vb;
+}
+
 main {
   display: flex;
-  width: 80%;
+  width: 60%;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10%;
+  background-color: #fff;
+  margin: auto;
+  padding: 5rem 0;
 }
 
 .main-title {
-  margin-left: 20%;
-  margin-top: 10%;
+  text-align: center;
+  margin-top: 5%;
 }
 
 .score-title {
@@ -22,8 +32,12 @@ main {
   gap: 15px;
 }
 
+.show-score {
+  width: 40%;
+}
+
 .score-table {
-  border: 1px solid #000;
+  border-collapse: collapse;
   width: 100%;
 }
 
@@ -31,7 +45,7 @@ main {
   background-color: rgb(211, 211, 211);
 }
 
-.score-table-rows td:nth-child(2) {
+.score-table-rows td {
   padding: 0 15px;
 }
 
