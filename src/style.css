@@ -4,14 +4,17 @@
 
 body {
   background: rgb(116,4,195);
-  background: linear-gradient(90deg, rgba(116,4,195,1) 16%, rgba(163,58,219,1) 47%, rgba(88,214,240,1) 93%);
-  height: 100vb;
+  background: linear-gradient(120deg, rgba(116,4,195,1) 16%, rgba(163,58,219,1) 47%, rgba(88,214,240,1) 93%);
+  height: 100vh;
+  overflow-y: hidden;
 }
 
 main {
   display: flex;
   min-width: fit-content;
   width: 60%;
+  height: 80%;
+  overflow-y: hidden;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -29,7 +32,7 @@ main {
 
 .main-title {
   text-align: center;
-  margin-top: 5%;
+  margin-top: 3%;
   color: #fff;
 }
 
@@ -51,14 +54,26 @@ main {
 .score-table {
   border-collapse: collapse;
   width: 100%;
+  font-size: 1.1rem;
+  padding: 5px;
+}
+
+.table-container {
+  height: 25rem;
+  overflow-y: auto;
+  align-self: flex-start;
 }
 
 .score-table tr:nth-child(even) {
   background-color: rgb(211, 211, 211);
 }
 
+.score-table tr:nth-child(odd) {
+  background-color: rgba(211, 211, 211, 0.5);
+}
+
 .score-table-rows td {
-  padding: 0 15px;
+  padding: 2px 15px;
 }
 
 .add-score {
@@ -75,6 +90,10 @@ main {
   gap: 15px;
 }
 
+input {
+  padding: 5px 10px;
+}
+
 .show-error {
   width: 70%;
   color: #f00;
@@ -89,10 +108,16 @@ button {
   background-color: #F0E800;
   border: none;
   color: #303030;
-  padding: 5px 15px;
+  padding: 7px 25px;
   font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
 }
 
 button:hover {
   cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #555;
+  color: #fff;
+  transform: scale(1.2);
 }
