@@ -31,6 +31,10 @@ main {
   background-color: rgb(211, 211, 211);
 }
 
+.score-table-rows td:nth-child(2) {
+  padding: 0 15px;
+}
+
 .add-score {
   display: flex;
   flex-direction: column;
@@ -43,6 +47,11 @@ main {
   flex-direction: column;
   justify-content: center;
   gap: 15px;
+}
+
+.show-error {
+  width: 70%;
+  color: #f00;
 }
 
 .submit-score {
